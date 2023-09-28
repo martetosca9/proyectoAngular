@@ -7,6 +7,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
     FooterComponent,
     SidebarComponent,
     PageWrapperComponent,
+    AlumnosComponent,
   ],
   imports: [
     BrowserModule,
