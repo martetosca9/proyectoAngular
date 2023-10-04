@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,10 +20,14 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
     SidebarComponent,
     PageWrapperComponent,
     AlumnosComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
