@@ -5,6 +5,7 @@
 
 .example-sidenav-content {
     display: flex;
+    flex-direction: column;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -12,4 +13,17 @@
 
 .example-sidenav {
     padding: 20px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
 }

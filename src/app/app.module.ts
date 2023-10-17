@@ -6,10 +6,10 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
-import { FormularioComponent } from './formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormularioComponent } from './formulario/formulario.component';
 
 
 @NgModule({
@@ -19,14 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     PageWrapperComponent,
     AlumnosComponent,
-    FormularioComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     DashboardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
