@@ -9,7 +9,6 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormularioComponent } from './formulario/formulario.component';
 
 
 @NgModule({
@@ -19,7 +18,6 @@ import { FormularioComponent } from './formulario/formulario.component';
     FooterComponent,
     PageWrapperComponent,
     AlumnosComponent,
-    FormularioComponent
   ],
   imports: [
     BrowserModule,
