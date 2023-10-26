@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { User } from '../../models';
 
 @Component({
   selector: 'app-users-dialog',
@@ -11,7 +12,10 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class UsersDialogComponent {
   userForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private matDialogRef: MatDialogRef<UsersDialogComponent>
+  constructor(
+    private fb: FormBuilder,
+    private matDialogRef: MatDialogRef<UsersDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public user?: User
     ) {
     this.userForm = this.fb.group({
       name: ['', Validators.required],

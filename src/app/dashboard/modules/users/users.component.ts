@@ -46,9 +46,19 @@ export class UsersComponent {
         next: (v) => {
           console.log("Value: ",v);
           if (!!v) {
-            this.userName = v;
+            this.users = [
+              ...this.users,
+              {
+                ...v,
+                id: new Date().getTime()
+              }
+            ]
           }
         }
       });
+    }
+
+    onDeleteUser(userId: number): void{
+      this.users = this.users.filter((u) => u.id !== userId);
     }
 }
