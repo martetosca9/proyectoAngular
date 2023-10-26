@@ -12,10 +12,10 @@ import { UsersComponent } from './modules/users/users.component';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
-    UsersComponent
   ],
   imports: [
     CommonModule,
