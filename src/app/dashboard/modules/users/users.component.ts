@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog'
 import { UsersDialogComponent } from './components/users-dialog/users-dialog.component';
 import { User } from './models';
+import { UsersService } from './users.service';
 
 @Component({
   selector: 'app-users',
@@ -19,37 +20,23 @@ export class UsersComponent {
   //   email: "mail1@asdasd"
   // }
 
-  users: User[] = [
-    {
-      id: 1,
-      name: 'martin',
-      lastName: 'toscanini',
-      email: 'martin@algo.com',
-    },
-    {
-      id: 2,
-      name: 'alfonso',
-      lastName: 'Burgos',
-      email: 'martin@algo.com',
-    },
-    {
-      id: 3,
-      name: 'walter',
-      lastName: 'apellidotres',
-      email: 'walter@walter.water'
-    }
-  ]
+  users: User[] = []
 
-  constructor (private matDialog: MatDialog) {}
+  constructor (
+    private matDialog: MatDialog,
+    private UsersService: UsersService
+    ) {
+      this.users = this.UsersService.getUsers();
+    }
     openUsersDialog(): void {
       this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({
         next: (v) => {
-          console.log("Value: ",v);
+
           if (!!v) {
             this.users = [
               ...this.users,
               {
-                ...v,
+                    ...v,
                 id: new Date().getTime()
               }
             ]
@@ -58,7 +45,15 @@ export class UsersComponent {
       });
     }
 
+    onEditUser(user: User): void {
+      this.matDialog.open(UsersDialogComponent, {
+        data: user,
+      });
+    }
+
     onDeleteUser(userId: number): void{
+      if (confirm("Eliminar usuario?")){
       this.users = this.users.filter((u) => u.id !== userId);
+      }
     }
 }

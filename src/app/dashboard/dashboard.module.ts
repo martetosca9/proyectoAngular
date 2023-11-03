@@ -9,6 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule as formulario } from './modules/forms/forms.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersComponent } from './modules/users/users.component';
+import { SharedModule } from '../Shared/shared.module';
 
 
 
@@ -25,7 +26,8 @@ import { UsersComponent } from './modules/users/users.component';
     MatToolbarModule,
     MatIconModule,
     formulario,
-    UsersModule
+    UsersModule,
+    SharedModule
   ],
   exports: [
     DashboardComponent

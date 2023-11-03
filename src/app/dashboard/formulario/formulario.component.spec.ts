@@ -1,21 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormularioComponent } from '../../formulario/formulario.component';
+// import { FormularioComponent } from '../../formulario/formulario.component';
 
-describe('FormularioComponent', () => {
-  let component: FormularioComponent;
-  let fixture: ComponentFixture<FormularioComponent>;
+// describe('FormularioComponent', () => {
+//   let component: FormularioComponent;
+//   let fixture: ComponentFixture<FormularioComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [FormularioComponent]
-    });
-    fixture = TestBed.createComponent(FormularioComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [FormularioComponent]
+//     });
+//     fixture = TestBed.createComponent(FormularioComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

@@ -4,20 +4,27 @@ import { UsersComponent } from './users.component';
 import { SharedModule } from 'src/app/Shared/shared.module';
 import { UsersDialogComponent } from './components/users-dialog/users-dialog.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
-
-
+import { UsersService } from './users.service';
+import { MockUsersService } from './mock-users.service';
+import { ApiUrl } from 'src/app/config/url.token';
 
 @NgModule({
-  declarations: [
-    UsersDialogComponent,
-    UsersComponent,
-    UsersTableComponent
+  declarations: [UsersDialogComponent, UsersComponent, UsersTableComponent],
+  imports: [SharedModule, CommonModule],
+  exports: [UsersComponent],
+
+  providers: [
+    UsersService,
+    {
+      provide: UsersService,
+      useClass: MockUsersService,
+    },
+    {
+      provide: APIURL,
+      useValue: {
+        url: "http://localhost:43210/users"
+      }
+    }
   ],
-  imports: [
-    SharedModule,
-  ],
-  exports: [
-    UsersComponent
-  ]
 })
-export class UsersModule { }
+export class UsersModule {}

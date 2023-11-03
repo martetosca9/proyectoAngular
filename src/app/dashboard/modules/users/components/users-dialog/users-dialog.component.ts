@@ -22,6 +22,10 @@ export class UsersDialogComponent {
       lastName: ['', Validators.required],
       email: ['', Validators.required]
     });
+
+    if (this.user) {
+      this.userForm.patchValue(this.user);
+    }
   }
 
   OnSubmit(): void {
