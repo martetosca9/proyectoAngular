@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { User } from '../users/models';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnDestroy {
   //propiedad
   loading = false;
 
+  clockSubscription: Subscription;
+
   constructor() {
     this.getUsers();
-    this.getClock().subscribe({
+    this.clockSubscription = this.getClock().subscribe({
       next: (v) => {
         console.log(v)
       },
@@ -25,6 +27,16 @@ export class HomeComponent {
         console.log("contador finalizado");
       }
     });
+
+    this.getClock().subscribe({
+      next: (v) => {
+        console.log("segunda sub")
+      }
+    })
+  }
+
+  ngOnDestroy(): void {
+    console.log("inicio destroy");
   }
 
   getClock(): Observable<number> {

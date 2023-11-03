@@ -8,4 +8,6 @@ import { MatSelectChange } from '@angular/material/select';
 })
 export class DashboardComponent {
   showFiller = false;
+
+  showHome = true;
 }

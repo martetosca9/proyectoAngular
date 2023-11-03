@@ -43,7 +43,8 @@
 
         <!-- <app-users></app-users> -->
 
-        <app-home></app-home>
+        <button (click)="showHome = !showHome">Inicio</button>
+        <app-home *ngIf="showHome"></app-home>
 
     </div>
 
