@@ -20,7 +20,7 @@ import { ApiUrl } from 'src/app/config/url.token';
       useClass: MockUsersService,
     },
     {
-      provide: APIURL,
+      provide: ApiUrl,
       useValue: {
         url: "http://localhost:43210/users"
       }
