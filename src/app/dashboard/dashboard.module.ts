@@ -10,6 +10,7 @@ import { FormsModule as formulario } from './modules/forms/forms.module';
 import { UsersModule } from './modules/users/users.module';
 import { UsersComponent } from './modules/users/users.component';
 import { SharedModule } from '../Shared/shared.module';
+import { HomeModule } from './modules/home/home.module';
 
 
 
@@ -27,7 +28,8 @@ import { SharedModule } from '../Shared/shared.module';
     MatIconModule,
     formulario,
     UsersModule,
-    SharedModule
+    SharedModule,
+    HomeModule
   ],
   exports: [
     DashboardComponent
