@@ -26,6 +26,12 @@ export class UsersTableComponent {
   }
 
   goToUserDetail(userId: number): void {
-    this.router.navigate(["dashboard", "users", "detail", userId])
+    this.router.navigate(["dashboard", "users", "detail", userId],
+    {
+      queryParams: {
+        search: "probando"
+      }
+    }
+    )
   }
 }
