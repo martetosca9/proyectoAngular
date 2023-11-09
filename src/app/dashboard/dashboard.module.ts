@@ -11,6 +11,7 @@ import { UsersModule } from './modules/users/users.module';
 import { UsersComponent } from './modules/users/users.component';
 import { SharedModule } from '../Shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
+import { RouterModule, Routes } from '@angular/router';
 
 
 
@@ -29,7 +30,8 @@ import { HomeModule } from './modules/home/home.module';
     formulario,
     UsersModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    RouterModule
   ],
   exports: [
     DashboardComponent

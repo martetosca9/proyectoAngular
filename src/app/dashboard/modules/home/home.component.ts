@@ -82,7 +82,7 @@ export class HomeComponent implements OnDestroy {
     await getUsersPromise
     //si no hay errores:
     .then((res) => {
-      console.log(res)
+      console.log(res);
     })
     //si hay un error:
     .catch((err => {

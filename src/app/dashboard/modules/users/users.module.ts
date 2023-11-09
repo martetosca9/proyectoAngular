@@ -7,10 +7,12 @@ import { UsersTableComponent } from './components/users-table/users-table.compon
 import { UsersService } from './users.service';
 import { MockUsersService } from './mock-users.service';
 import { ApiUrl } from 'src/app/config/url.token';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [UsersDialogComponent, UsersComponent, UsersTableComponent],
-  imports: [SharedModule, CommonModule],
+  declarations: [UsersDialogComponent, UsersComponent, UsersTableComponent, UserDetailComponent],
+  imports: [SharedModule, CommonModule, RouterModule],
   exports: [UsersComponent],
 
   providers: [

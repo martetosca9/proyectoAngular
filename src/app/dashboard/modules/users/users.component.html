@@ -1,13 +1,18 @@
-<p>users works!</p>
-<button (click)="openUsersDialog()" mat-flat-button color="primary">
-    <mat-icon>add</mat-icon>
-    Crear usuario
-</button>
 
-<!-- {{ testUser | fullname : "lowercase" }} -->
+<div class="containerUsers">
 
-<app-users-table
-[dataSource]="users"
-(editUser)="onEditUser($event)"
-(deleteUser)="onDeleteUser($event)"
-></app-users-table>
+    <h1 appHeadline>Usuarios</h1>
+
+    <button (click)="openUsersDialog()" mat-flat-button color="primary">
+        <mat-icon>add</mat-icon>
+        Crear usuario
+    </button>
+
+
+    <app-users-table
+    [dataSource]="users"
+    (editUser)="onEditUser($event)"
+    (deleteUser)="onDeleteUser($event)"
+    ></app-users-table>
+
+</div>

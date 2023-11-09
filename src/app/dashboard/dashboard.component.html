@@ -2,11 +2,13 @@
 <mat-drawer-container class="example-container" autosize>
     <!-- sidebar -->
     <mat-drawer #drawer class="example-sidenav" mode="over">
-        <p>Auto-resizing sidenav</p>
-        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-        <button (click)="showFiller = !showFiller" mat-raised-button>
-            Toggle extra text
-        </button>
+        <div class="column">
+            <button routerLink="home" (click)="showFiller = !showFiller" mat-raised-button>Inicio</button>
+            <button routerLink="users" (click)="showFiller = !showFiller" mat-raised-button>Usuarios</button>
+            <button (click)="showFiller = !showFiller" mat-raised-button>Cursos</button>
+            <button (click)="showFiller = !showFiller" mat-raised-button>Alumnos</button>
+            <button (click)="showFiller = !showFiller" mat-raised-button>Inscripciones</button>
+        </div>
     </mat-drawer>
     <!-- contenido -->
 
@@ -37,14 +39,8 @@
     </p>
 
     <div class="example-sidenav-content">
-        <!-- container -->
 
-        <!-- <app-forms></app-forms> -->
-
-        <!-- <app-users></app-users> -->
-
-        <button (click)="showHome = !showHome">Inicio</button>
-        <app-home *ngIf="showHome"></app-home>
+        <router-outlet></router-outlet>
 
     </div>
 
