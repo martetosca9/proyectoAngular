@@ -3,6 +3,14 @@ import { User } from './models';
 import { ApiUrl } from 'src/app/config/url.token';
 import { ApiUrlConfig } from 'src/app/config/url.token'
 import { Inject } from '@angular/core';
+import { Observable, Subscriber } from 'rxjs';
+
+export interface userAsync {
+  id: number;
+  name: string;
+  lastName: string;
+  email: string;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -14,26 +22,23 @@ export class UsersService {
     private url: ApiUrlConfig
   ) {}
 
-  getUsers(): User[] {
-    return [
-      // {
-      //   id: 1,
-      //   name: 'martin',
-      //   lastName: 'toscanini',
-      //   email: 'martin@algo.com',
-      // },
-      // {
-      //   id: 2,
-      //   name: 'alfonso',
-      //   lastName: 'Burgos',
-      //   email: 'martin@algo.com',
-      // },
-      // {
-      //   id: 3,
-      //   name: 'walter',
-      //   lastName: 'apellidotres',
-      //   email: 'walter@walter.walter',
-      // }
-    ];
+
+  getUsers(): Observable<userAsync[]> {
+    return new Observable((subscriber) => {
+      subscriber.next([
+        {
+          id: 1,
+          name: 'martinASYNC',
+          lastName: 'toscanini',
+          email: 'martin@algo.com',
+        },
+        {
+          id: 2,
+          name: 'alfonsoASYNC ',
+          lastName: 'Burgos',
+          email: 'martin@algo.com',
+        }
+      ])
+    })
   }
 }

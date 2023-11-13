@@ -3,16 +3,17 @@
 
     <h1 appHeadline>Usuarios</h1>
 
-    <button (click)="openUsersDialog()" mat-flat-button color="primary">
+    <!-- <button (click)="openUsersDialog()" mat-flat-button color="primary">
         <mat-icon>add</mat-icon>
         Crear usuario
-    </button>
+    </button> -->
 
+    <pre>{{ users$ | async | json }}</pre>
 
-    <app-users-table
+    <!-- <app-users-table
     [dataSource]="users"
     (editUser)="onEditUser($event)"
     (deleteUser)="onDeleteUser($event)"
-    ></app-users-table>
+    ></app-users-table> -->
 
 </div>

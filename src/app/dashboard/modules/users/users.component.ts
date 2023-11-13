@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog'
 import { UsersDialogComponent } from './components/users-dialog/users-dialog.component';
 import { User } from './models';
-import { UsersService } from './users.service';
+import { UsersService, userAsync } from './users.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-users',
@@ -12,48 +13,58 @@ import { UsersService } from './users.service';
 
 export class UsersComponent {
 
-  userName = "";
+  users$: Observable<userAsync[]>;
 
-  // testUser: User = {
-  //   name: "nombreaa",
-  //   lastName: "apellidoaa",
-  //   email: "mail1@asdasd"
-  // }
+  constructor (private usersService: UsersService) {
 
-  users: User[] = []
+    this.users$ = this.usersService.getUsers();
+  
 
-  constructor (
-    private matDialog: MatDialog,
-    private UsersService: UsersService
-    ) {
-      this.users = this.UsersService.getUsers();
-    }
-    openUsersDialog(): void {
-      this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({
-        next: (v) => {
 
-          if (!!v) {
-            this.users = [
-              ...this.users,
-              {
-                    ...v,
-                id: new Date().getTime()
-              }
-            ]
-          }
-        }
-      });
-    }
+    // private matDialog: MatDialog,
 
-    onEditUser(user: User): void {
-      this.matDialog.open(UsersDialogComponent, {
-        data: user,
-      });
-    }
+    // private usersService: UsersService ) {
+    //   this.usersService.getUsers().subscribe({
+    //     next: (v) => {
+    //       console.log(v);
+    //       this.users = v;
+    //     },
+    //     error: (err) => {},
+    //     complete: () => {}
+    //   })
+    // }
 
-    onDeleteUser(userId: number): void{
-      if (confirm("Eliminar usuario?")){
-      this.users = this.users.filter((u) => u.id !== userId);
-      }
-    }
+    // private UsersService: UsersService
+    // ) {
+    //   this.users = this.UsersService.getUsers();
+    // }
+    // openUsersDialog(): void {
+    //   this.matDialog.open(UsersDialogComponent).afterClosed().subscribe({
+    //     next: (v) => {
+
+    //       if (!!v) {
+    //         this.users = [
+    //           ...this.users,
+    //           {
+    //                 ...v,
+    //             id: new Date().getTime()
+    //           }
+    //         ]
+    //       }
+    //     }
+    //   });
+    // }
+
+    // onEditUser(user: User): void {
+    //   this.matDialog.open(UsersDialogComponent, {
+    //     data: user,
+    //   });
+    // }
+
+    // onDeleteUser(userId: number): void{
+    //   if (confirm("Eliminar usuario?")){
+    //   this.users = this.users.filter((u) => u.id !== userId);
+    //   }
+    // }
+  }
 }
