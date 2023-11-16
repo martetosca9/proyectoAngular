@@ -25,17 +25,9 @@ import { HttpClientModule } from '@angular/common/http'
     ReactiveFormsModule,
     DashboardModule,
     BrowserAnimationsModule,
-    // ngx-translate and the loader module
     HttpClientModule
   ],
-  providers: [
-    {
-      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
-      useValue: {
-        appearance: 'fill',
-      },
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent],
 })
 
