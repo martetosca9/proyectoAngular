@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Course } from '../../models';
 
 @Component({
@@ -12,4 +12,7 @@ export class CoursesTableComponent {
   dataSource: Course[] = [];
 
   displayedColumns = ['id', 'name', 'startDate', 'endDate', 'actions']
+
+  @Output()
+  editCourse = new EventEmitter();
 }

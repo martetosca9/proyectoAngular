@@ -1,6 +1,6 @@
 export interface Course {
     id: number;
-    name: number;
+    name: string;
     startDate: Date;
     endDate: Date;
 }

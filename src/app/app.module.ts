@@ -9,8 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http'
     ReactiveFormsModule,
     DashboardModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],

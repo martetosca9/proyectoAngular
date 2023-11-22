@@ -1,3 +1,9 @@
 <h1>Cursos</h1>
 
-<app-courses-table></app-courses-table>
+<div>
+    <button (click)="addCourse()" mat-flat-button color="primary">
+        Agregar curso
+    </button>
+</div>
+
+<app-courses-table [dataSource]="(courses$ | async) || []"></app-courses-table>
