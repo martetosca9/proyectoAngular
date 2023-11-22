@@ -12,6 +12,8 @@ import { UsersComponent } from './modules/users/users.component';
 import { SharedModule } from '../Shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { RouterModule, Routes } from '@angular/router';
+import { CoursesTableComponent } from './modules/courses/components/courses-table/courses-table.component';
+import { CoursesModule } from './modules/courses/courses.module';
 
 
 
@@ -31,7 +33,8 @@ import { RouterModule, Routes } from '@angular/router';
     UsersModule,
     SharedModule,
     HomeModule,
-    RouterModule
+    RouterModule,
+    CoursesModule
   ],
   exports: [
     DashboardComponent
