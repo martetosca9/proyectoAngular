@@ -43,4 +43,10 @@ export class CoursesService {
         return of([...this.courses])
     }
 
+    editCourse$(id: number, payload: Course): Observable<Course[]> {
+        this.courses.push(payload);
+        return of(
+            this.courses.map((c) => (c.id === id ? { ...c, ...payload} : c))
+        )
+    }
 }

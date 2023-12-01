@@ -42,6 +42,10 @@
 
         <td mat-cell *matCellDef="let course">
 
+            <button (click)="editCourse" mat-icon-button color="primary">
+                <mat-icon>edit</mat-icon>
+            </button>
+
             <!-- <button (click)="editUser.emit(course)" mat-icon-button color="primary">
                 <mat-icon>edit</mat-icon>
             </button>
