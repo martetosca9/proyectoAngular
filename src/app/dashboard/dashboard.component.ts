@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
+import { AuthService } from '../auth/services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,5 +10,9 @@ import { MatSelectChange } from '@angular/material/select';
 export class DashboardComponent {
   showFiller = false;
 
-  showHome = true;
+  constructor(private authService: AuthService) {}
+
+  logout(): void {
+    this.authService.logout();
+  }
 }

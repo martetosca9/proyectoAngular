@@ -68,7 +68,11 @@ export class HomeComponent implements OnDestroy {
           id: 1,
           name: "testasync",
           lastName: "lastnameasync",
-          email: "async@mail.com"
+          email: "async@mail.com",
+          age: 44,
+          token: "llllask",
+          role: "ADMIN",
+          password: "123456"
         }
       ]
 

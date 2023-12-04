@@ -36,8 +36,6 @@ import { CoursesModule } from './modules/courses/courses.module';
     RouterModule,
     CoursesModule
   ],
-  exports: [
-    DashboardComponent
-  ]
+  exports: [DashboardComponent]
 })
 export class DashboardModule { }

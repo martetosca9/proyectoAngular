@@ -15,19 +15,21 @@ export class MockUsersService {
         name: 'martin',
         lastName: 'toscanini',
         email: 'martin@algo.com',
+        age: 23,
+        token: "fasdfa",
+        role: "ADMIN",
+        password: "123456"
       },
       {
         id: 2,
         name: 'alfonso',
         lastName: 'Burgos',
         email: 'martin@algo.com',
-      },
-      {
-        id: 3,
-        name: 'walter',
-        lastName: 'apellidotres',
-        email: 'walter@walter.walter',
-      },
+        age: 14,
+        token: "12313",
+        role: "ADMIN",
+        password: "123456"
+      }
     ];
   }
 }
