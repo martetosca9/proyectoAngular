@@ -14,6 +14,7 @@ import { HomeModule } from './modules/home/home.module';
 import { RouterModule, Routes } from '@angular/router';
 import { CoursesTableComponent } from './modules/courses/components/courses-table/courses-table.component';
 import { CoursesModule } from './modules/courses/courses.module';
+import { DashboardRoutingModule } from './dashboard-routing.module';
 
 
 
@@ -34,7 +35,8 @@ import { CoursesModule } from './modules/courses/courses.module';
     SharedModule,
     HomeModule,
     RouterModule,
-    CoursesModule
+    CoursesModule,
+    DashboardRoutingModule
   ],
   exports: [DashboardComponent]
 })

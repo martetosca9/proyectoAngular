@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "admin1",
+      "lastName": "admin1aaa",
+      "email": "admin1@mail.com",
+      "age": 23,
+      "id": 1
+    },
+    {
+      "name": "wadmin2",
+      "lastName": "wadewasdw",
+      "email": "wwwwww@mail.com",
+      "age": 29,
+      "password": "123456",
+      "token": "qwerqwerhg",
+      "role": "ADMIN",
+      "id": 2
+    }
+  ],
+  "courses": []
+}
