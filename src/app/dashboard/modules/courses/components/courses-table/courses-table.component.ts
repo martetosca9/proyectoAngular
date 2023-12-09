@@ -8,12 +8,12 @@ import { Course } from '../../models';
   styleUrls: ['./courses-table.component.scss']
 })
 export class CoursesTableComponent {
-
   @Input()
-  dataSource: Course[] = [];
-
+  dataSource: Course[] = []
   displayedColumns = ['id', 'name', 'startDate', 'endDate', 'actions']
 
   @Output()
-  editCourse = new EventEmitter<Course>();
+  editCourse = new EventEmitter();
+  @Output()
+  deleteCourse = new EventEmitter();
 }

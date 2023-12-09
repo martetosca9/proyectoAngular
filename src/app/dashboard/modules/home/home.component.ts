@@ -82,17 +82,13 @@ export class HomeComponent implements OnDestroy {
 
     });
 
-    //frena antes de resolver (espera los 2seg)
     await getUsersPromise
-    //si no hay errores:
     .then((res) => {
       console.log(res);
     })
-    //si hay un error:
     .catch((err => {
       alert("error inesperado"), console.log(err);
     }))
-    //se usa siempre
     .finally(() => {
       this.loading = false;
     });

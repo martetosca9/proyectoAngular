@@ -21,12 +21,12 @@ import { RouterModule } from '@angular/router';
       provide: UsersService,
       useClass: MockUsersService,
     },
-    {
-      provide: ApiUrl,
-      useValue: {
-        url: "http://localhost:43210/users"
-      }
-    }
+    // {
+    //   provide: ApiUrl,
+    //   useValue: {
+    //     url: "http://localhost:43210/users"
+    //   }
+    // }
   ],
 })
 export class UsersModule {}
